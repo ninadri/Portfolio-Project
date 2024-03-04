@@ -4,6 +4,18 @@
   box-sizing: border-box;
 }
 
+body{
+  background-color: #ffe7ad;
+}
+
+/* Flexbox Container on Whole Page */
+.webpage-flebox {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+
 /* Screen Adjustments */
 @media (min-width: 768px) {
   .container {
@@ -17,24 +29,35 @@
     max-width: 1024px; 
   }
 }
-/*Navigation Bar Styling */
+
+main {
+  padding-top: 200px; 
+}
+
+.title { 
+  margin: 0;
+  position: absolute;
+  top: 10px;
+  left: 10px;
+}
+
+/* Adriana Nino title */
+nav .title h1 {
+  font-size: 30px;
+  font-weight: bold;
+  float: left;
+  color: #92455d;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  cursor: pointer;
+}
 nav{
   width: 100%;
   height: 75px;
   line-height: 75px;
   padding: 10px;
   position: fixed;
-  background-image: linear-gradient(blueviolet, pink);
-}
-
-nav .title h1 {
-  font-size: 30px;
-  font-weight: bold;
-  float: left;
-  color: white;
-  text-transform: uppercase;
-  letter-spacing: 1.5px;
-  cursor: pointer;
+  background-image: linear-gradient(rgb(255, 106, 123), hsl(17, 100%, 74%));
 }
 
 nav ul {
@@ -59,30 +82,18 @@ li, a {
   font-family: "Playfair Display", serif;
   font-weight: 500;
   font-size: 16px;
-  color:black; 
+  color:rgb(66, 41, 122); 
   text-decoration: none;
 }
 
 header {
+  position: relative;
   display: flex;
   align-items: center;
   padding: 35px 0;
-  color: rgb(255, 30, 240);
-  border: 1px solid rgb(255, 23, 151); 
-  border-radius: 5px;
 }
 
-main {
-  padding-top: 200px; 
-}
-
-.title { 
-  margin: 0;
-  position: absolute;
-  top: 10px;
-  left: 10px;
-}
-
+/*Navigation Bar Styling */
 .nav-links {
 display: flex;
 list-style-type: none;
@@ -97,125 +108,152 @@ margin: 0;
 .nav-links li a {
   padding: 10px 20px; 
   text-decoration: none; 
-  border: 1px solid rgb(72, 19, 66); 
+  border: 1px solid rgba(112, 74, 148, 0.543); 
   border-radius: 5px; 
 }
 
 .nav-links li a:hover {
-  background-color: rgb(255, 0, 225);
+  background-color: rgb(111, 84, 147);
+  color: #FFA07A;
 }
+
+/* Photo of Swirls*/
+.image-header{
+  position: absolute;
+  top: 75px; 
+  left: 0;
+  width: 100%;
+  clip-path: inset(0px 0px 120px 0px);
+}
+.image-header img {
+  width: 100%;
+}
+
 
 /* About Me Styling */
 .about-me {
-  color:rgb(241, 151, 166);
+  color:#f197a6;
   display: flex;
   justify-content: flex-start;
+  margin-left: 72px;
+  margin-bottom: 100px;
+  padding-top: 20px;
 }
 
-.divider {
-  border-right: 2px solid black;
-  height: 250%;
-  margin-right: 20px;
-  margin-bottom: 30px;
-}
 
 .about-me h2 {
-  font-size: 20px;
-  width: 50%;
-  color: darkblue;
-  line-height: 24px;
+  font-size: 35px;
+  color: #b95a77;
+  margin-right: 15px;
+  text-align: right;
 }
 
+.border-about{
+  border-left: 2px solid #521a82; 
+  padding-left: 60px; 
+  height: 150px;
+  text-align: center;
+}
 .about-me p {
-  color: orange;
+  color:rgba(60, 6, 69, 0.543);
   line-height: 1.5;
+  margin-right: 20px;
 }
 
 /* Work Styling */
 .work {
-  color:rgb(248, 248, 106);
+  color:rgb(241, 151, 166);
   display: flex;
-  margin-top: 80px;
+  justify-content: flex-start;
+  margin-left: 76px;
+  margin-bottom: 100px;
+  padding-top: 20px;
 }
 
-.workDivider {
-  border-right: 2px solid black;
-  height: 100%;
-  margin-right: 20px;
-  margin-top: 160px;
- 
+.border-work{
+  border-left: 2px solid #521a82; 
+  padding-left: 60px; 
+  height: 600px;
 }
 
-.workText {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
 .work h2 {
-  margin-right: 74.5px;
-  margin-top: 80px;
+  font-size: 35px;
+  color: #b95a77;
+  margin-right: 15px;
 }
 
-.work-section {
-  width: 50%;
-  margin-top: 40px;
-  margin-bottom: 80px;
+/* Flexbox Work */
+.flexbox-container {
+  display: flex;
+  flex-wrap: wrap;
+  felx-direction: row;
+
+  
 }
 
-.work-section h2 {
-  color: darkblue;
-  line-height: 24px;
+.flexbox-item{
+  margin: 10px;
+  border: #92455d;
+  background-color: #FFA07A;
 }
 
-.work p {
-  color: orange;
-  line-height: 1.5;
+.flexbox-item-1{
+  min-height: 600px;
+  width: 700px;
+  flex-grow: 1;
 }
+
+.flexbox-item-2, 
+.flexbox-item-3,
+.flexbox-item-4,
+.flexbox-item-5{
+  min-height: 150px;
+  width: 372px;
+}
+
 
 /* Contact Me Styling */
 .contact {
-    color:rgb(241, 151, 166);
-    display: flex;
+  color:rgb(241, 151, 166);
+  display: flex;
+  justify-content: flex-start;
+  margin-left: 45px;
+  text-align: right;
+  margin-bottom: 60px;
+  padding-top: 20px;
 }
   
-.contactDivider {
-  border-right: 2px solid black;
-  height: 250%;
-  margin-right: 20px;
-  margin-bottom: 30px;
+.border-contact{
+  border-left: 2px solid #521a82; 
+  padding-left: 60px; 
+  height: 150px;
 }
 
-.contactText {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
 .contact h2 {
-  margin-right: 0px;
+  font-size: 35px;
+  color: #b95a77;
+  margin-right: 15px;
 }
 
-.contact-section {
-  width: 50%;
-}
-
-.contact-section h2 {
-  color: darkblue;
-  line-height: 24px;
-}
-
-.contact p {
-  color: orange;
-  line-height: 1.5;
-}
 
 .contact ul{
-    display: flex;
-    flex-wrap: wrap;
-    list-style: none;
-    justify-content: space-between;
-    flex-direction: row;
-  }
-  
-  
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  justify-content: space-between;
+  flex-direction: row;
+  } 
+
+.contact ul li {
+  text-align: center;
+  margin-top: 30px;
+  margin-right: 80px; 
+}
+
+.contact li a:hover {
+  color: #b95d7a;
+}
+
+
 
 
