@@ -17,17 +17,28 @@ body{
 
 
 /* Screen Adjustments */
-@media (min-width: 768px) {
-  .container {
-    max-width: 768px; 
-    margin: 0 auto; 
-  }
+@media (min-width: 800px) {
+.flexbox-header{
+  flex: 3;
 }
 
-@media (min-width: 1024px) {
-  .container {
-    max-width: 1024px; 
-  }
+.flexbox-main{
+  order: 1;
+}
+
+.flexbox-work{
+  order: 2; 
+}
+
+.flexbox-contact {
+  order: 4; 
+}
+}
+@media (min-width: 600px) {
+
+.aside{
+  flex: 1;
+}
 }
 
 main {
@@ -168,12 +179,13 @@ margin: 0;
   margin-left: 76px;
   margin-bottom: 100px;
   padding-top: 20px;
+  height: 70rem;
 }
 
 .border-work{
   border-left: 2px solid #521a82; 
   padding-left: 60px; 
-  height: 600px;
+  height: 70rem;
 }
 
 .work h2 {
@@ -187,7 +199,6 @@ margin: 0;
   display: flex;
   flex-wrap: wrap;
   felx-direction: row;
-
   
 }
 
